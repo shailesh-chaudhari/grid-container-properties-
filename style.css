@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    font-family: 'Dancing Sctipt', cursive;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 48px;
+}
+
+#grid-container {
+    display: grid;
+    /* specify value 4 times mean is define 4 column in a row and give equal width to all */
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 16px;
+
+    /* row-gap: 32px;
+    column-gap: 48px; */
+}
+
+.movie-poster {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.movie-poster:hover {
+    animation: zoom 1s forwards;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 2px 5px #ccc;
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width:900px) {
+    #grid-container {
+        grid-template-columns: auto auto auto;
+
+    }
+}
+
+@media (max-width:400px) {
+    #grid-container {
+        grid-template-columns: auto auto;
+
+    }
+}
